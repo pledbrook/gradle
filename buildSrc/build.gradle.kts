@@ -56,7 +56,7 @@ dependencies {
     compile("org.ow2.asm:asm:6.0")
     compile("org.ow2.asm:asm-commons:6.0")
     compile(gradleApi())
-    compile("com.google.guava:guava-jdk5:14.0.1@jar")
+//    compile("com.google.guava:guava-jdk5:21.0@jar")
     compile("commons-lang:commons-lang:2.6@jar")
     compile(localGroovy())
     compile("org.codehaus.groovy.modules.http-builder:http-builder:0.7.2") {
@@ -74,6 +74,7 @@ dependencies {
     compile("me.champeau.gradle:japicmp-gradle-plugin:0.2.4")
     compile("org.asciidoctor:asciidoctor-gradle-plugin:1.5.6")
     compile("com.github.javaparser:javaparser-core:2.4.0")
+    compile("io.ratpack:ratpack-core:1.5.1")
 }
 
 val isCiServer: Boolean by extra { System.getenv().containsKey("CI") }

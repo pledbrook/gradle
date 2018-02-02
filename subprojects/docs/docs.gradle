@@ -20,6 +20,7 @@ import org.gradle.build.docs.CacheableAsciidoctorTask
 import org.gradle.build.docs.Docbook2Xhtml
 import org.gradle.build.docs.ExtractSamplesTask
 import org.gradle.build.docs.ExtractSnippetsTask
+import org.gradle.build.docs.HttpServerTask
 import org.gradle.build.docs.UserGuideSectionVerifier
 import org.gradle.build.docs.UserGuideTransformTask
 import org.gradle.build.docs.Xhtml2Pdf
@@ -486,4 +487,8 @@ task docs {
 
 task docsZip(type: Zip) {
     from project.outputs.docs
+}
+
+task serveDocs(type: HttpServerTask) {
+    serveFromDir = docsDir
 }
